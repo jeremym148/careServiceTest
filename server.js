@@ -30,12 +30,11 @@ const callSF = async () => {
             },
             body: `{  
                 "Client":{  
-                   "FirstName":"5445454",
-                   "LastName":"Test212",
-                   "PersonEmail":"samyuktha212.p@valtech.co.in"
+                   "FirstName":"54454",
+                   "LastName":"Test2",
+                   "PersonEmail":"samp@va.in"
                 }, 
                "ExternalId__c":"${name}",
-               "TransactionId__c":"o3736323",
                "StoreRetailCode__c":"A06",
                 
           }`
