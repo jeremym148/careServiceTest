@@ -21,8 +21,8 @@ var port = process.env.PORT || 8080;
 const callSF = async () => {
     var url = `https://louisvuitton--icon.cs77.my.salesforce.com/services/apexrest/CareService/`;
 
-    var getPOSTobject = () =>{
-        console.log(moment().format('x'));
+    var getPOSTobject = (index) =>{
+        console.log(moment().format('x')+index);
         return { method: 'POST', headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer 00D0t0000004ZF6!AR0AQIvFzVNZ1t93wyolqdlU010pTsfzqew0YfBavtj.itwWA3jBflPHBjJ8DeyKsZnMv49FQ40_iRpEwgNbEqiGt4MBcSY4`
@@ -30,7 +30,7 @@ const callSF = async () => {
             body: `{  
                 "Client":{  
                    "Salutation":"03",
-                   "FirstName":"${moment().format('x')}",
+                   "FirstName":"${moment().format('x')+index}",
                    "LastName":"Test212",
                    "Firstname2__pc":null,
                    "Lastname2__pc":null,
@@ -64,7 +64,7 @@ const callSF = async () => {
                    }
                 ], 
                 
-               "ExternalId__c":"${moment().format('x')}",
+               "ExternalId__c":"${moment().format('x')+index}",
                "TransactionId__c":"o3736323",
                "StoreRetailCode__c":"A06",
                "CA_Name__c":"Jeremy M",
@@ -105,8 +105,8 @@ const callSF = async () => {
         console.log("enter2");
         var arrayValues = Array.from(Array(10).keys());
 
-        arrayValues.map( () => promises.push(
-            fetch(`${url}`,getPOSTobject()))
+        arrayValues.map( (index) => promises.push(
+            fetch(`${url}`,getPOSTobject(index)))
         );
 
         Promise.all(promises).then(function(values) {
