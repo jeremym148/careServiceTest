@@ -127,6 +127,7 @@ app.post('/sendRequests', async function(req, res){
         callSF();
         res.send("sent");
     } catch(err){
+        console.log("error")
         console.log(err)
         res.status(500).send({ error: err.message });
         // res.sendStatus(500).send(err.message);
