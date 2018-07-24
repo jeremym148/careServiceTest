@@ -69,7 +69,8 @@ const callSF = async () => {
         );
 
         Promise.all(promises).then(function(values) {
-            console.log(values[0]);
+            console.log(values);
+            return values;
           });
 
     } catch(err){
@@ -87,8 +88,8 @@ app.post('/sendRequests', async function(req, res){
     res.set('Content-Type', 'application/json');
     try{
         console.log("enter")
-        callSF();
-        res.send('sent');
+        var data = callSF();
+        res.send(data);
     } catch(err){
         console.log("error")
         console.log(err)
