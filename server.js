@@ -69,7 +69,10 @@ const callSF = async () => {
         );
 
         Promise.all(promises).then(function(values) {
-            console.log(values);
+            for (value in values){
+                console.log(JSON.stringify(value));
+            }
+            
           });
 
     } catch(err){
