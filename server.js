@@ -69,7 +69,7 @@ const callSF = async () => {
         );
 
         Promise.all(promises).then(function(values) {
-            console.log(values[0]["[Symbol(Response internals)]"]["headers"]);
+            console.log(values[0]);
           });
 
     } catch(err){
