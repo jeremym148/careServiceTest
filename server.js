@@ -30,20 +30,13 @@ const callSF = async () => {
             },
             body: `{  
                 "Client":{  
-                   "Salutation":"03",
                    "FirstName":"5445454",
                    "LastName":"Test212",
-                   "Firstname2__pc":null,
-                   "Lastname2__pc":null,
                    "PersonEmail":"samyuktha212.p@valtech.co.in"
                 }, 
                "ExternalId__c":"${name}",
                "TransactionId__c":"o3736323",
                "StoreRetailCode__c":"A06",
-               "CA_Name__c":"Jeremy M",
-               "CA_Code__c":"JM0726",
-               "MyRepair_CreatedDate__c":"2012-09-29",
-               "MyRepairStatus__c":"Shipped to store"
                 
           }`
         };
