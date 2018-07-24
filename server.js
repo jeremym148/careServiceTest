@@ -102,12 +102,12 @@ const callSF = async () => {
         var arrayValues = Array.from(Array(10).keys());
 
         arrayValues.map( () => promises.push(
-            fetch(`${url}`,POST))
+            fetch(`${url}`,POST)).then(function(values) {
+                console.log(values);
+              })
         );
 
-        Promise.all(promises).then(function(values) {
-            console.log(values);
-          });
+        Promise.all(promises)
 
     } catch(err){
         console.log("error2")
