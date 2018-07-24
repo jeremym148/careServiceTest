@@ -55,6 +55,9 @@ const callSF = async () => {
         await Promise.all(promises).then(function(values) {
             console.log(values);
             return values;
+          })
+          .catch(reason => { 
+            console.log(reason)
           });
 
     } catch(err){
