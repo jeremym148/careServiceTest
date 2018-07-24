@@ -36,15 +36,7 @@ const callSF = async () => {
                    "Firstname2__pc":null,
                    "Lastname2__pc":null,
                    "PersonEmail":"samyuktha212.p@valtech.co.in"
-                },
-                "Instructions":[  
-                   {  
-                      "Line__c":"0",
-                      "InstructionCode__c":"00587",
-                      "Instruction_Name__c":"RICUCIRE PARZIALMENTE (<5 CM.)"
-                   }
-                ], 
-                
+                }, 
                "ExternalId__c":"${name}",
                "TransactionId__c":"o3736323",
                "StoreRetailCode__c":"A06",
