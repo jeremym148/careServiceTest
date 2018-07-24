@@ -7,6 +7,7 @@ const Wsdlrdr = require('wsdlrdr');
 const R = require('ramda');
 var BodyReqUtils = require('./BodyReqUtils');
 var BodyParseResUtils = require('./BodyParseResUtils');
+const moment = require('moment');
 
 var app = express();
 app.use(bodyParser.text());
