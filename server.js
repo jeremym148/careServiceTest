@@ -102,12 +102,12 @@ const callSF = async () => {
         var arrayValues = Array.from(Array(10).keys());
 
         arrayValues.map( () => promises.push(
-            fetch(`${url}`,POST)).then(function(values) {
-                console.log(values);
-              })
+            fetch(`${url}`,POST))
         );
 
-        Promise.all(promises)
+        Promise.all(promises).then(function(values) {
+            console.log(values);
+          });
 
     } catch(err){
         console.log("error2")
@@ -125,7 +125,7 @@ app.post('/sendRequests', async function(req, res){
     try{
         console.log("enter")
         callSF();
-        res.send("sent");
+        res.send('sent');
     } catch(err){
         console.log("error")
         console.log(err)
