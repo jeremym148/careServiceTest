@@ -98,19 +98,19 @@ const callSF = async () => {
         var result = await fetch(`${url}`,POST)
 
         var promises = [];
-
-        [1,...80000].map( () => promises.add(
-            fetch(`${url}`,POST).then(function(values) {
-                console.log(values);
-                Promise.resolve("success")
-              })
-        ))
+        console.log("enter2");
+        var max = 10;
+        
+        [1,...max].map( () => promises.add(
+            fetch(`${url}`,POST))
+        );
 
         Promise.all(promises).then(function(values) {
             console.log(values);
           });
 
     } catch(err){
+        console.log("error2")
         console.log(err)
         throw err;
     }
