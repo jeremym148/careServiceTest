@@ -88,7 +88,7 @@ app.post('/sendRequests', async function(req, res){
     res.set('Content-Type', 'application/json');
     try{
         console.log("enter")
-        var data = callSF();
+        var data = await callSF();
         res.send(data);
     } catch(err){
         console.log("error")
