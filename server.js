@@ -62,14 +62,14 @@ const callSF = async () => {
     try{
         var promises = [];
         console.log("enter2");
-        var arrayValues = Array.from(Array(500).keys());
+        var arrayValues = Array.from(Array(1000).keys());
 
         arrayValues.map( (index) => promises.push(
             fetch(`${url}`,getPOSTobject(index)))
         );
 
         Promise.all(promises).then(function(values) {
-            console.log(values);
+            console.log(values[0]["[Symbol(Response internals)]"]["headers"]);
           });
 
     } catch(err){
