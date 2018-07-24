@@ -18,7 +18,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 var port = process.env.PORT || 8080;
 
 
-const callSF = async () => {
+const callSF = async (qty) => {
     var url = `https://louisvuitton--icon.cs77.my.salesforce.com/services/apexrest/CareService/`;
 
     var getPOSTobject = (index) =>{
@@ -46,7 +46,7 @@ const callSF = async () => {
     try{
         var promises = [];
         console.log("enter2");
-        var arrayValues = Array.from(Array(5000).keys());
+        var arrayValues = Array.from(Array(qty).keys());
 
         arrayValues.map( (index) => promises.push(
             fetch(`${url}`,getPOSTobject(index)))
@@ -71,11 +71,11 @@ const callSF = async () => {
 
 
 app.post('/sendRequests', async function(req, res){
-    var body = req.body;
+    var qty = req.body.qty;
     res.set('Content-Type', 'application/json');
     try{
         console.log("enter")
-        var data = await callSF();
+        var data = await callSF(qty);
         res.send(data);
     } catch(err){
         console.log("error")
