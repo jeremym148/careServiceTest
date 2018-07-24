@@ -65,7 +65,7 @@ const callSF = async () => {
                    }
                 ], 
                 
-               "ExternalId__c":"${name}",
+               "ExternalId__c":"9517452521",
                "TransactionId__c":"o3736323",
                "StoreRetailCode__c":"A06",
                "CA_Name__c":"Jeremy M",
