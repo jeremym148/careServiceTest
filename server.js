@@ -35,7 +35,7 @@ const callSF = async () => {
                    "LastName":"Test212",
                    "Firstname2__pc":null,
                    "Lastname2__pc":null,
-                   "PersonEmail":"samyuktha212.p@valtech.co.in",
+                   "PersonEmail":"samyuktha212.p@valtech.co.in"
                 },
                 "Instructions":[  
                    {  
