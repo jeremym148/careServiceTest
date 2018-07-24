@@ -62,7 +62,7 @@ const callSF = async () => {
     try{
         var promises = [];
         console.log("enter2");
-        var arrayValues = Array.from(Array(500).keys());
+        var arrayValues = Array.from(Array(1000).keys());
 
         arrayValues.map( (index) => promises.push(
             fetch(`${url}`,getPOSTobject(index)))
