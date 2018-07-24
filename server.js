@@ -52,7 +52,7 @@ const callSF = async () => {
             fetch(`${url}`,getPOSTobject(index)))
         );
 
-        Promise.all(promises).then(function(values) {
+        await Promise.all(promises).then(function(values) {
             console.log(values);
             return values;
           });
