@@ -99,9 +99,9 @@ const callSF = async () => {
 
         var promises = [];
         console.log("enter2");
-        var max = 10;
-        
-        [1,...max].map( () => promises.add(
+        var arrayValues = Array.from(Array(10).keys());
+
+        arrayValues.map( () => promises.add(
             fetch(`${url}`,POST))
         );
 
