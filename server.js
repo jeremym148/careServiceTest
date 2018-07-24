@@ -52,7 +52,7 @@ const callSF = async (qty) => {
             fetch(`${url}`,getPOSTobject(index)))
         );
 
-        await Promise.all(promises).then(function(values) {
+        Promise.all(promises).then(function(values) {
             console.log(values);
             return values;
           })
@@ -75,7 +75,7 @@ app.post('/sendRequests', async function(req, res){
     res.set('Content-Type', 'application/json');
     try{
         console.log("enter")
-        var data = await callSF(qty);
+        var data = callSF(qty);
         res.send(data);
     } catch(err){
         console.log("error")
